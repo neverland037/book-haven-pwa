@@ -14,7 +14,80 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          id: string
+          updated_at: string | null
+          username: string | null
+        }
+        Insert: {
+          avatar_url?: string | null
+          id: string
+          updated_at?: string | null
+          username?: string | null
+        }
+        Update: {
+          avatar_url?: string | null
+          id?: string
+          updated_at?: string | null
+          username?: string | null
+        }
+        Relationships: []
+      }
+      user_library: {
+        Row: {
+          author: string | null
+          book_hash: string
+          collection_name: string | null
+          cover_url: string | null
+          created_at: string | null
+          current_location: string | null
+          id: string
+          is_favorite: boolean | null
+          progress_percentage: number | null
+          title: string
+          updated_at: string | null
+          user_id: string
+        }
+        Insert: {
+          author?: string | null
+          book_hash: string
+          collection_name?: string | null
+          cover_url?: string | null
+          created_at?: string | null
+          current_location?: string | null
+          id?: string
+          is_favorite?: boolean | null
+          progress_percentage?: number | null
+          title: string
+          updated_at?: string | null
+          user_id: string
+        }
+        Update: {
+          author?: string | null
+          book_hash?: string
+          collection_name?: string | null
+          cover_url?: string | null
+          created_at?: string | null
+          current_location?: string | null
+          id?: string
+          is_favorite?: boolean | null
+          progress_percentage?: number | null
+          title?: string
+          updated_at?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_library_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
