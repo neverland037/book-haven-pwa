@@ -8,89 +8,126 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Reader.io - Warm, readable palette for long reading sessions */
+    --background: 40 15% 97%;
+    --foreground: 20 10% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 40 20% 99%;
+    --card-foreground: 20 10% 12%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 40 20% 99%;
+    --popover-foreground: 20 10% 12%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 25 75% 47%;
+    --primary-foreground: 40 20% 99%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 35 30% 85%;
+    --secondary-foreground: 20 10% 12%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 35 20% 90%;
+    --muted-foreground: 20 8% 46%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 25 75% 47%;
+    --accent-foreground: 40 20% 99%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 40 20% 99%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 35 15% 88%;
+    --input: 35 15% 88%;
+    --ring: 25 75% 47%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Sepia theme variables */
+    --sepia-bg: 40 30% 92%;
+    --sepia-fg: 35 20% 20%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* OLED theme variables */
+    --oled-bg: 0 0% 0%;
+    --oled-fg: 0 0% 45%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Safe areas for mobile (iOS notch, Android bars) */
+    --safe-area-inset-top: env(safe-area-inset-top);
+    --safe-area-inset-bottom: env(safe-area-inset-bottom);
+    --safe-area-inset-left: env(safe-area-inset-left);
+    --safe-area-inset-right: env(safe-area-inset-right);
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    /* Reading font sizes */
+    --font-size-xs: 14px;
+    --font-size-sm: 16px;
+    --font-size-md: 18px;
+    --font-size-lg: 20px;
+    --font-size-xl: 22px;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slide: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 40 15% 98%;
+    --sidebar-foreground: 20 10% 12%;
+    --sidebar-primary: 25 75% 47%;
+    --sidebar-primary-foreground: 40 20% 99%;
+    --sidebar-accent: 35 20% 93%;
+    --sidebar-accent-foreground: 20 10% 12%;
+    --sidebar-border: 35 15% 90%;
+    --sidebar-ring: 25 75% 47%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode with slightly warm undertone */
+    --background: 20 8% 8%;
+    --foreground: 40 10% 92%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 20 10% 10%;
+    --card-foreground: 40 10% 92%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 20 10% 10%;
+    --popover-foreground: 40 10% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 25 75% 55%;
+    --primary-foreground: 20 10% 10%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 20 12% 15%;
+    --secondary-foreground: 40 10% 92%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 20 10% 16%;
+    --muted-foreground: 35 8% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 25 75% 55%;
+    --accent-foreground: 20 10% 10%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 40 10% 92%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 20 10% 20%;
+    --input: 20 10% 20%;
+    --ring: 25 75% 55%;
+
+    --sidebar-background: 20 10% 9%;
+    --sidebar-foreground: 40 10% 92%;
+    --sidebar-primary: 25 75% 55%;
+    --sidebar-primary-foreground: 20 10% 10%;
+    --sidebar-accent: 20 12% 16%;
+    --sidebar-accent-foreground: 40 10% 92%;
+    --sidebar-border: 20 10% 18%;
+    --sidebar-ring: 25 75% 55%;
+  }
+
+  /* Sepia reading theme */
+  .theme-sepia {
+    --background: var(--sepia-bg);
+    --foreground: var(--sepia-fg);
+    --card: 40 35% 94%;
+    --card-foreground: 35 20% 20%;
+  }
+
+  /* OLED reading theme */
+  .theme-oled {
+    --background: var(--oled-bg);
+    --foreground: var(--oled-fg);
+    --card: 0 0% 3%;
+    --card-foreground: 0 0% 45%;
   }
 }
 
@@ -101,5 +138,59 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Mobile touch optimization */
+  @media (hover: none) and (pointer: coarse) {
+    button, a, [role="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+
+  /* Safe area utilities */
+  .safe-top {
+    padding-top: max(1rem, var(--safe-area-inset-top));
+  }
+
+  .safe-bottom {
+    padding-bottom: max(1rem, var(--safe-area-inset-bottom));
+  }
+
+  .safe-left {
+    padding-left: max(1rem, var(--safe-area-inset-left));
+  }
+
+  .safe-right {
+    padding-right: max(1rem, var(--safe-area-inset-right));
+  }
+}
+
+@layer utilities {
+  /* Reader-specific utilities */
+  .reader-container {
+    height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile */
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Smooth transitions */
+  .transition-slide {
+    transition: var(--transition-slide);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
   }
 }
